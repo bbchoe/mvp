@@ -1,7 +1,15 @@
 import React from 'react'
 
-var App = () => {
-  return <div>My React Node app is set up!</div>
+class App extends React.Component {
+  constructor(props) {
+    super(props)
+    this.state = {
+      
+    }
+  }
+  render() {
+    return <div>My React Node app is set up! Testing class syntax</div>
+  }
 }
 
 export default App
