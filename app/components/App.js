@@ -1,14 +1,25 @@
 import React from 'react'
+import InvoiceSummary from './InvoiceSummary'
+import InvoiceEntry from './InvoiceEntry'
+import InvoiceList from './InvoiceList'
 
 class App extends React.Component {
   constructor(props) {
     super(props)
     this.state = {
-      
+
     }
   }
+
   render() {
-    return <div>My React Node app is set up! Testing class syntax</div>
+    return (
+      <div className="box">
+        <h1>Super Awesome Invoice Manager</h1>
+        <InvoiceSummary />
+        <InvoiceEntry />
+        <InvoiceList />
+      </div>
+    )
   }
 }
 

@@ -1,0 +1,9 @@
+th {
+  font-size: 10px;
+  color: blue;
+}
+
+.box {
+  border: 1px solid blue;
+  color: blue;
+}
