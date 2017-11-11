@@ -1,9 +1,9 @@
-import React from 'react'
-import Invoice from './Invoice.js'
+import React from 'react';
+import Invoice from './Invoice.js';
 
 let InvoiceList = () => (
   <div className="box">
-    <h5>Invoice List Which Will Contain A Table Of Invoices</h5>
+    <h5>Invoice List Which Will (eventually) Contain A Table Of Invoices</h5>
     <table>
       <thead>
         <tr>
@@ -22,6 +22,6 @@ let InvoiceList = () => (
       </tbody>
     </table>
   </div>
-)
+);
 
-export default InvoiceList
+export default InvoiceList;

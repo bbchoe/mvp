@@ -2,6 +2,14 @@
   border: 1px solid blue;
 }
 
+/* INVOICE DATA ENTRY STYLING */
+input:invalid {
+  border: 2px dashed red;
+}
+
+input:valid {
+  border: 1px solid black;
+}
 
 /* INVOICE TABLE STYLING */
 
