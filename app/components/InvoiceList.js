@@ -1,7 +1,8 @@
 import React from 'react'
+import Invoice from './Invoice.js'
 
 let InvoiceList = () => (
-  <div>
+  <div className="box">
     <h5>Invoice List Which Will Contain A Table Of Invoices</h5>
     <table>
       <thead>
@@ -16,6 +17,9 @@ let InvoiceList = () => (
           <th>Actual Collection Date (if app.)</th>
         </tr>
       </thead>
+      <tbody>
+        <Invoice />
+      </tbody>
     </table>
   </div>
 )

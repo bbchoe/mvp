@@ -1,9 +1,19 @@
+.box {
+  border: 1px solid blue;
+}
+
+
+/* INVOICE TABLE STYLING */
+
+table {
+  width: 100%
+}
+
 th {
-  font-size: 10px;
+  font-size: 8px;
   color: blue;
 }
 
-.box {
-  border: 1px solid blue;
-  color: blue;
+tr {
+  font-size: 8px;
 }
