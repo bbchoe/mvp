@@ -31,7 +31,7 @@ class App extends React.Component {
     return (
       <div className="mainapp">
         <h1>Super Awesome Invoice Manager</h1>
-        <InvoiceSummary />
+        <InvoiceSummary invoices={this.state.invoices} />
         <InvoiceEntry updateInvoices={this.updateInvoices}/>
         <InvoiceList invoices={this.state.invoices} />
       </div>

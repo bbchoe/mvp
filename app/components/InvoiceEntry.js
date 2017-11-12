@@ -29,7 +29,7 @@ class InvoiceEntry extends React.Component {
   render() {
     return (
       <div className="box">
-        <h5>Enter Data About Invoices Here</h5>
+        <h5>Add an Invoice</h5>
         <form onSubmit={this.handleSubmit}>
           <div>
             <label>Invoice id:</label>

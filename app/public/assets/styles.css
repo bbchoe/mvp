@@ -29,6 +29,7 @@ footer, header, hgroup, menu, nav, section {
 }
 body {
   line-height: 1;
+  letter-spacing: 0.3px;
 }
 ol, ul {
   list-style: none;
@@ -87,7 +88,6 @@ input:valid {
 
 label {
   font-size: 10px;
-  margin-left: 5px;
 }
 
 .submit-btn {
@@ -101,7 +101,8 @@ form {
 /* ----------- INVOICE LIST STYLING ----------- */
 
 table {
-  width: 100%
+  width: 100%;
+  margin: 5px;
 }
 
 th {
