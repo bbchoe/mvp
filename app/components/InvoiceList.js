@@ -1,7 +1,7 @@
 import React from 'react';
 import Invoice from './Invoice.js';
 
-let InvoiceList = () => (
+let InvoiceList = (props) => (
   <div className="box">
     <h5>Invoice List Which Will (eventually) Contain A Table Of Invoices</h5>
     <table>

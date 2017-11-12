@@ -1,7 +1,7 @@
 import React from 'react'
 
 let Invoice = () => (
-  <tr>
+  <tr className="box">
     <td>123</td>
     <td>Procter & Gamble</td>
     <td>PG201712</td>

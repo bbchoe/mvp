@@ -2,13 +2,21 @@ import React from 'react'
 import InvoiceSummary from './InvoiceSummary'
 import InvoiceEntry from './InvoiceEntry'
 import InvoiceList from './InvoiceList'
+import { getFreshInvoices } from '../client-helpers/getFreshInvoices'
 
 class App extends React.Component {
   constructor(props) {
     super(props)
     this.state = {
-
+      invoices: []
     }
+  }
+
+  componentDidMount() {
+    let freshInvoices = getFreshInvoices()
+    this.setState({
+      invoices: freshInvoices
+    })
   }
 
   render() {
