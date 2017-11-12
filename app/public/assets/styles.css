@@ -25,3 +25,7 @@ th {
 tr {
   font-size: 8px;
 }
+
+td {
+  border: 1px solid blue;
+}

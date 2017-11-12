@@ -1,6 +1,6 @@
 import axios from 'axios'
 
-let appServerURL = 'http://localhost:8080'
+const appServerURL = 'http://localhost:8080'
 
 let postToServer = (invoice) => {
   // receives invoice input object, sends it to server in POST request

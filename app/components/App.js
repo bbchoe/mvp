@@ -8,15 +8,8 @@ class App extends React.Component {
   constructor(props) {
     super(props)
     this.state = {
-      invoices: []
-    }
-  }
 
-  componentDidMount() {
-    let freshInvoices = getFreshInvoices()
-    this.setState({
-      invoices: freshInvoices
-    })
+    }
   }
 
   render() {

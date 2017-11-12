@@ -31,4 +31,8 @@ app.post('/invoice', (req, res) => {
   });
 })
 
+app.get('/invoices', (req, res) => {
+  res.send()
+})
+
 export default app
