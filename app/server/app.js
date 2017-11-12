@@ -32,7 +32,7 @@ app.post('/invoice', (req, res) => {
 })
 
 app.get('/invoices', (req, res) => {
-  res.send()
+  db.retrieve(res.send.bind(res))
 })
 
 export default app

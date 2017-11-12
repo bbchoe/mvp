@@ -20,19 +20,32 @@ const invoiceSchema = mongoose.Schema({
 
 const Invoice = mongoose.model('Invoice', invoiceSchema)
 
-save = (invoice, resSendfn) => {
+save = (invoice, cbResSend) => {
   // receives invoice object input. if invoice object with the id does not already exist, adds to the database.
   // otherwise, updates existing invoice object with that id
   let freshInvoice = new Invoice(invoice)
   freshInvoice.save()
   .then(() => {
     console.log('...record saved')
-    resSendfn()
+    cbResSend()
   })
   .catch(err => {
-    resSendfn(err)
+    cbResSend(err)
     console.log(err.message)
   })
 }
 
+retrieve = (cbResSend) => {
+  Invoice.find().sort({id: -1})
+  .then(data => {
+    console.log('DATA FROM DB ', data)
+    cbResSend(data)
+  })
+  .catch(err => {
+    console.log('ERROR: problem retrieving from db: ', err)
+    cbResSend(err)
+  })
+}
+
 module.exports.save = save
+module.exports.retrieve = retrieve

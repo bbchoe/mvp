@@ -3,17 +3,24 @@ import axios from 'axios'
 const appServerURL = 'http://localhost:8080'
 
 const getFreshInvoices = (appSetStatefn) => {
-  console.log('IN GET FRESH INVOICES')
+  console.log('2. IN GET FRESH INVOICES')
+  // let testArray = ['invoice 1', 'invoice 2', 'invoice 3']
+  // appSetStatefn( {
+  //   invoices: testArray
+  // })
+
   let options = {
     method: 'GET',
     url: appServerURL + '/invoices',
   }
-  let testArray = ['invoice 1', 'invoice 2', 'invoice 3']
   axios(options)
   .then(response => {
     appSetStatefn({
-      invoices: testArray
+      invoices: response.data
     })
+  })
+  .catch(err => {
+    console.log('ERROR: did not get fresh invoices ', err)
   })
 }
 
