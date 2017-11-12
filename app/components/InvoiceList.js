@@ -3,16 +3,16 @@ import Invoice from './Invoice.js';
 
 let InvoiceList = (props) => (
   <div className="box">
-    <h5>Invoice List Which Will (eventually) Contain A Table Of Invoices</h5>
+    <h5>Invoice List</h5>
       <table>
         <thead>
-          <tr>
-            <th>Amount Due</th>
+          <tr className="headerRow">
+            <th>Due Date</th>
             <th>Invoice Number</th>
             <th>Client Name</th>
             <th>Client Code</th>
             <th>Issued Date</th>
-            <th>Due Date</th>
+            <th>Amount</th>
             <th>Expected Collection Date</th>
             <th>Actual Collection Date (if app.)</th>
           </tr>

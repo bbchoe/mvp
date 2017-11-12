@@ -62,8 +62,8 @@ class InvoiceEntry extends React.Component {
           <div>
             <label>Actual collection timing:</label>
             <input name="actual" type="date" value={this.state.actual} onChange={this.handleInputChange} />
+            <input className="submit-btn" type="submit" value="Submit" />
           </div>
-            <input type="submit" value="Submit" />
         </form>
       </div>
     )

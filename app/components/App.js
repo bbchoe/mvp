@@ -29,7 +29,7 @@ class App extends React.Component {
 
   render() {
     return (
-      <div className="box">
+      <div className="mainapp">
         <h1>Super Awesome Invoice Manager</h1>
         <InvoiceSummary />
         <InvoiceEntry updateInvoices={this.updateInvoices}/>
