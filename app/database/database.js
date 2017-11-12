@@ -38,7 +38,6 @@ save = (invoice, cbResSend) => {
 retrieve = (cbResSend) => {
   Invoice.find().sort({id: -1})
   .then(data => {
-    console.log('DATA FROM DB ', data)
     cbResSend(data)
   })
   .catch(err => {

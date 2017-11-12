@@ -7,18 +7,20 @@ let InvoiceList = (props) => (
       <table>
         <thead>
           <tr>
+            <th>Amount Due</th>
             <th>Invoice Number</th>
             <th>Client Name</th>
             <th>Client Code</th>
             <th>Issued Date</th>
             <th>Due Date</th>
-            <th>Amount Due</th>
             <th>Expected Collection Date</th>
             <th>Actual Collection Date (if app.)</th>
           </tr>
         </thead>
         <tbody>
-          <Invoice />
+          {props.invoices.map((invoiceItem, index) => {
+            return <Invoice invoice={invoiceItem} key={index}/>
+          })}
         </tbody>
       </table>
   </div>

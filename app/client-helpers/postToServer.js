@@ -2,7 +2,7 @@ import axios from 'axios'
 
 const appServerURL = 'http://localhost:8080'
 
-let postToServer = (invoice) => {
+let postToServer = (invoice, cbUpdateInvoices) => {
   // receives invoice input object, sends it to server in POST request
   let options = {
     method: 'POST',
@@ -10,6 +10,9 @@ let postToServer = (invoice) => {
     data: invoice
   }
   axios(options)
+  .then(response => {
+    cbUpdateInvoices()
+  })
 }
 
 export default postToServer

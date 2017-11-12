@@ -2,8 +2,8 @@ import React from 'react'
 import postToServer from '../client-helpers/postToServer'
 
 class InvoiceEntry extends React.Component {
-  constructor() {
-    super();
+  constructor(props) {
+    super(props);
     this.state = {
       id: '123',
       name: 'TEST CLIENT NAME',
@@ -23,7 +23,7 @@ class InvoiceEntry extends React.Component {
     })
   }
   handleSubmit(event) {
-    postToServer(this.state)
+    postToServer(this.state, this.props.updateInvoices)
     event.preventDefault()
   }
   render() {

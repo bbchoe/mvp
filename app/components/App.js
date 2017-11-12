@@ -14,6 +14,7 @@ class App extends React.Component {
   }
 
   updateInvoices () {
+    console.log('UPDATING INVOICES')
     getFreshInvoices(this.setState.bind(this))
   }
 
@@ -30,13 +31,14 @@ class App extends React.Component {
     return (
       <div className="box">
         <h1>Super Awesome Invoice Manager</h1>
-        <button onClick={this.showInvoices.bind(this)}>Show Current Invoices</button>
         <InvoiceSummary />
-        <InvoiceEntry />
-        <InvoiceList />
+        <InvoiceEntry updateInvoices={this.updateInvoices}/>
+        <InvoiceList invoices={this.state.invoices} />
       </div>
     )
   }
 }
 
 export default App
+
+// <button onClick={this.showInvoices.bind(this)}>Show Current Invoices</button>
