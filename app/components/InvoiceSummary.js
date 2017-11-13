@@ -7,7 +7,7 @@ let InvoiceSummary = (props) => {
 
   props.invoices.forEach(invoice => {
     totalValue += invoice.amount
-    if (invoice.actual) {
+    if (!invoice.actual) {
       outstandingInvoiceCt ++
       outstandingInvoiceValue += invoice.amount
     }
@@ -19,18 +19,18 @@ let InvoiceSummary = (props) => {
     <table>
     <thead>
       <tr>
-        <th>Total Invoices</th>
-        <th>$ Value</th>
         <th>Outstanding Invoices</th>
+        <th>$ Value</th>
+        <th>Total Invoices</th>
         <th>$ Value</th>
         </tr>
     </thead>
     <tbody>
       <tr>
-        <td>{props.invoices.length}</td>
-        <td>{'$ ' + totalValue.toLocaleString()}</td>
         <td>{outstandingInvoiceCt}</td>
         <td>{'$ ' + outstandingInvoiceValue.toLocaleString()}</td>
+        <td>{props.invoices.length}</td>
+        <td>{'$ ' + totalValue.toLocaleString()}</td>
       </tr>
     </tbody>
     </table>

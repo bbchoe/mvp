@@ -78,6 +78,13 @@ input {
   font-size: 10px;
 }
 
+button {
+  border: none;
+  font-size: 6px;
+  margin-left: 10px;
+  vertical-align: middle
+}
+
 input:invalid {
   border: 1px solid red;
 }
