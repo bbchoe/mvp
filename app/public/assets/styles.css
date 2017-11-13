@@ -113,7 +113,7 @@ th {
 }
 
 tr {
-  font-size: 8px;
+  font-size: 10px;
   color: gray;
   height: 15px;
 }
@@ -121,4 +121,5 @@ tr {
 td {
   text-align: center;
   vertical-align: middle;
+  color: black;
 }

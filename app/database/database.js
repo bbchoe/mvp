@@ -36,7 +36,7 @@ save = (invoice, cbResSend) => {
 }
 
 retrieve = (cbResSend) => {
-  Invoice.find().sort({due: 1})
+  Invoice.find().sort({due: 1, actual: 1})
   .then(data => {
     console.log('...retrieving data')
     cbResSend(data)

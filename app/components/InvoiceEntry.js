@@ -37,27 +37,27 @@ class InvoiceEntry extends React.Component {
           </div>
           <div>
             <label>Client name:</label>
-            <input type="text" name="name" value={this.state.name} onChange={this.handleInputChange} required />
+            <input type="text" name="name" value={this.state.name} onChange={this.handleInputChange} />
           </div>
           <div>
             <label>Client code:</label>
-            <input type="text" name="code" value={this.state.code} onChange={this.handleInputChange} required />
+            <input type="text" name="code" value={this.state.code} onChange={this.handleInputChange} />
           </div>
           <div>
             <label>Issued date:</label>
-            <input type="date" name="issued" value={this.state.issued} onChange={this.handleInputChange} required />
+            <input type="date" name="issued" value={this.state.issued} onChange={this.handleInputChange} />
           </div>
           <div>
             <label>Due date:</label>
-            <input type="date" name="due" value={this.state.due} onChange={this.handleInputChange} required />
+            <input type="date" name="due" value={this.state.due} onChange={this.handleInputChange} />
           </div>
           <div>
             <label>Amount due:  $</label>
-            <input name="amount" type="number" min="0" step="1" value={this.state.amount} onChange={this.handleInputChange} required />
+            <input name="amount" type="number" min="0" step="1" value={this.state.amount} onChange={this.handleInputChange} />
           </div>
           <div>
             <label>Expected collection timing:</label>
-            <input name="expected" type="date" value={this.state.expected} onChange={this.handleInputChange} required />
+            <input name="expected" type="date" value={this.state.expected} onChange={this.handleInputChange} />
           </div>
           <div>
             <label>Actual collection timing (optional):</label>
