@@ -23,7 +23,6 @@ class App extends React.Component {
   }
 
   componentDidMount () {
-    console.log('1. IN COMPONENT DID MOUNT')
     this.updateInvoices()
   }
 

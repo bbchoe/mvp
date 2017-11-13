@@ -2,8 +2,10 @@ import React from 'react'
 
 let Invoice = (props) => {
   let style = {textDecoration: 'none'}
-  if (props.invoice.actual.length > 6) {
+  let collectionStatus = '';
+  if (props.invoice.actual) {
     style.textDecoration = 'line-through'
+    collectionStatus = props.invoice.actual.slice(0,10)
   }
 
   return (
@@ -15,7 +17,7 @@ let Invoice = (props) => {
       <td style={style} >{props.invoice.issued.slice(0,10)}</td>
       <td style={style} >{'$' + props.invoice.amount}</td>
       <td style={style} >{props.invoice.expected.slice(0,10)}</td>
-      <td style={style} >{props.invoice.actual.slice(0,10)}</td>
+      <td style={style} >{collectionStatus}</td>
     </tr>
   )
 }

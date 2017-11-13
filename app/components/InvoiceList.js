@@ -13,8 +13,8 @@ let InvoiceList = (props) => (
             <th>Client Code</th>
             <th>Issued Date</th>
             <th>Amount</th>
-            <th>Expected Collection Date</th>
-            <th>Actual Collection Date (if app.)</th>
+            <th>Exp Coll Date</th>
+            <th>Act Coll Date (opt)</th>
           </tr>
         </thead>
         <tbody>

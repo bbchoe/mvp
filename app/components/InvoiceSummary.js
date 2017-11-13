@@ -7,7 +7,7 @@ let InvoiceSummary = (props) => {
 
   props.invoices.forEach(invoice => {
     totalValue += invoice.amount
-    if (invoice.actual.length < 6) {
+    if (invoice.actual) {
       outstandingInvoiceCt ++
       outstandingInvoiceValue += invoice.amount
     }
@@ -17,16 +17,22 @@ let InvoiceSummary = (props) => {
     <div className="invoicesummary box">
     <h5>Invoices Summary</h5>
     <table>
-    <tr>
-      <th>Total Invoices</th>
-      <th>$ Value</th>
-      <th>Outstanding Invoices</th>
-      <th>$ Value</th>
-    </tr>
-      <td>{props.invoices.length}</td>
-      <td>{'$ ' + totalValue.toLocaleString()}</td>
-      <td>{outstandingInvoiceCt}</td>
-      <td>{'$ ' + outstandingInvoiceValue.toLocaleString()}</td>
+    <thead>
+      <tr>
+        <th>Total Invoices</th>
+        <th>$ Value</th>
+        <th>Outstanding Invoices</th>
+        <th>$ Value</th>
+        </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>{props.invoices.length}</td>
+        <td>{'$ ' + totalValue.toLocaleString()}</td>
+        <td>{outstandingInvoiceCt}</td>
+        <td>{'$ ' + outstandingInvoiceValue.toLocaleString()}</td>
+      </tr>
+    </tbody>
     </table>
     </div>
   )
